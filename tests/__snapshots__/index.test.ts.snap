@@ -17,3 +17,24 @@ exports[`insertAt 'Append/prepend outside' matches the snapshot 1`] = `
       </html>
     "
 `;
+
+exports[`insertAt 'Behavior not specified' matches the snapshot 1`] = `
+"
+      <html>
+        <body>
+          <main>text<footer></footer></main>
+        </body>
+      </html>
+    "
+`;
+
+exports[`insertAt 'Options is an array' matches the snapshot 1`] = `
+"
+      <html>
+        <body>
+          <main>text<footer></footer></main>
+          <div id=\\"content\\"><footer></footer></div>
+        </body>
+      </html>
+    "
+`;

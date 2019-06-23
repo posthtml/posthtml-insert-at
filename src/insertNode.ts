@@ -20,6 +20,7 @@ function insertNode({
 
   return {
     tag: node.tag,
+    attrs: node.attrs,
     content
   };
 }
