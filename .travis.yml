@@ -3,10 +3,6 @@ language: node_js
 node_js:
   - stable
 
-env:
-  matrix:
-  global:
-
 branches:
   only:
     - master
@@ -14,6 +10,6 @@ branches:
 cache: yarn
 
 scripts:
-  - yarn test && yarn build
+  - yarn test --coverage
 
 after_success: npx codecov
