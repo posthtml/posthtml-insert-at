@@ -5,7 +5,7 @@
 [![Build][build]][build-badge]
 [![Coverage][codecov-shield]][codecov]
 
-Append or prepend HTML at a selector.
+`posthtml-insert-at` is a [PostHTML](https://github.com/posthtml/posthtml) plugin that appends or prepends HTML at a selector. HTML content can be appended/prepended inside or outside of the selector.
 
 Before:
 
@@ -34,7 +34,7 @@ After:
 ```bash
 yarn add -D posthtml-insert-at
 # OR
-npm i posthtml posthtml-insert-at
+npm i posthtml-insert-at
 ```
 
 ## Usage
@@ -48,9 +48,6 @@ const html = fs.readFileSync('./index.html');
 
 posthtml()
   .use(
-    /**
-     * The plugin accepts an object or an an array of objects
-     */
     insertAt({
       /**
        * Specify the selector to append/prepend content to.
@@ -60,7 +57,7 @@ posthtml()
       selector: 'main',
 
       /**
-       * Prepend HTML markup to the selector.
+       * Prepend HTML markup at the selector.
        */
       prepend: `
         <header>
@@ -69,7 +66,7 @@ posthtml()
       `,
 
       /**
-       * Append HTML markup to the selector.
+       * Append HTML markup at the selector.
        */
       append: `
         <footer>
@@ -78,7 +75,7 @@ posthtml()
       `,
 
       /**
-       * Specify whether to append/prepend content inside or outside (adjacent to) of the selector.
+       * Specify whether to append/prepend content inside or outside (i.e. adjacent to) of the selector.
        *
        * The default behavior is `inside`.
        */
@@ -89,6 +86,35 @@ posthtml()
   .then(result => fs.writeFileSync('./after.html', result.html));
 ```
 
+### Options
+
+The plugin accepts an object or an an array of objects.
+
+```js
+const option = {
+  selector: 'body',
+  prepend: '<header></header>',
+  append: '<footer></footer>'
+};
+
+insertAt(option);
+
+// OR
+
+insertAt([option /* more options */]);
+```
+
+Options:
+
+```ts
+{
+  selector: string; // e.g. 'main' | '.main' | '#.main'
+  prepend?: string;
+  append?: string;
+  behavior?: 'inside' | 'outside'; // default is 'inside'
+}
+```
+
 ### Limitations
 
 Currently, this plugin does not supported nested selectors.
@@ -97,9 +123,11 @@ Currently, this plugin does not supported nested selectors.
 
 See [PostHTML Guidelines](https://github.com/posthtml/posthtml/tree/master/docs) and [contribution guide](CONTRIBUTING.md).
 
-### License [MIT](LICENSE)
+### License
 
-[npm]: https://img.shields.io/npm/v/posthtml-insert-at.svg
+[MIT](LICENSE)
+
+[npm]: https://img.shields.io/npm/v/posthtml-insert-at.svg?color=brightgreen
 [npm-url]: https://npmjs.com/package/posthtml-insert-at
 [deps]: https://david-dm.org/metonym/posthtml-insert-at.svg
 [deps-url]: https://david-dm.org/metonym/posthtml-insert-at
