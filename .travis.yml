@@ -9,7 +9,7 @@ branches:
 
 cache: yarn
 
-scripts:
+script:
   - yarn test --coverage
 
 after_success: npx codecov
