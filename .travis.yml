@@ -3,6 +3,17 @@ language: node_js
 node_js:
   - stable
 
+env:
+  matrix:
+  global:
+
+branches:
+  only:
+    - master
+
 cache: yarn
+
+scripts:
+  - yarn test && yarn build
 
 after_success: npx codecov
