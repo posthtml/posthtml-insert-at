@@ -37,6 +37,62 @@ yarn add -D posthtml-insert-at
 npm i posthtml posthtml-insert-at
 ```
 
+## Usage
+
+```js
+const fs = require('fs');
+const posthtml = require('posthtml');
+const insertAt = require('posthtml-insert-at').default;
+
+const html = fs.readFileSync('./index.html');
+
+posthtml()
+  .use(
+    /**
+     * The plugin accepts an object or an an array of objects
+     */
+    insertAt({
+      /**
+       * Specify the selector to append/prepend content to.
+       *
+       * Acceptable selectors include tagname (e.g. `main`), class (e.g. `.main`) or id (e.g. `#main`).
+       */
+      selector: 'main',
+
+      /**
+       * Prepend HTML markup to the selector.
+       */
+      prepend: `
+        <header>
+          <a href="/">Home</a>
+        </header>
+      `,
+
+      /**
+       * Append HTML markup to the selector.
+       */
+      append: `
+        <footer>
+          &copy; ${new Date().getFullYear()}
+        </footer>
+      `,
+
+      /**
+       * Specify whether to append/prepend content inside or outside (adjacent to) of the selector.
+       *
+       * The default behavior is `inside`.
+       */
+      behavior: 'outside'
+    })
+  )
+  .process(html)
+  .then(result => fs.writeFileSync('./after.html', result.html));
+```
+
+### Limitations
+
+Currently, this plugin does not supported nested selectors.
+
 ### Contributing
 
 See [PostHTML Guidelines](https://github.com/posthtml/posthtml/tree/master/docs) and [contribution guide](CONTRIBUTING.md).
