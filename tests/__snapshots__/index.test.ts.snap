@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`insertAt 'Append/prepend inside' matches the snapshot 1`] = `
+"
+      <html>
+        <body>
+          <main><header></header>text<footer></footer></main>
+        </body>
+      </html>
+    "
+`;
+
+exports[`insertAt 'Append/prepend outside' matches the snapshot 1`] = `
+"
+      <html>
+        <body><header></header><main>text</main><footer></footer></body>
+      </html>
+    "
+`;
