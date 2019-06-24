@@ -5,7 +5,7 @@
 [![Build][build]][build-badge]
 [![Coverage][codecov-shield]][codecov]
 
-`posthtml-insert-at` is a [PostHTML](https://github.com/posthtml/posthtml) plugin that appends or prepends HTML at a selector. HTML content can be appended/prepended inside or outside of the selector.
+`posthtml-insert-at` is a [PostHTML](https://github.com/posthtml/posthtml) plugin to append or prepend HTML inside or outside of a selector.
 
 Before:
 
@@ -51,8 +51,7 @@ posthtml()
     insertAt({
       /**
        * Specify the selector to append/prepend content to.
-       *
-       * Acceptable selectors include tagname (e.g. `main`), class (e.g. `.main`) or id (e.g. `#main`).
+       * Selectors include tag name (e.g. `main`), class (e.g. `.main`) or id (e.g. `#main`).
        */
       selector: 'main',
 
@@ -101,14 +100,14 @@ insertAt(option);
 
 // OR
 
-insertAt([option /* more options */]);
+insertAt([option, ... /* more options */]);
 ```
 
 Options:
 
 ```ts
 {
-  selector: string; // e.g. 'main' | '.main' | '#.main'
+  selector: string; // e.g. 'main' | '.main' | '#main'
   prepend?: string;
   append?: string;
   behavior?: 'inside' | 'outside'; // default is 'inside'
