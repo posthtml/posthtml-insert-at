@@ -1,5 +1,5 @@
 import posthtml from 'posthtml';
-import insertAt from '../src';
+import insertAt from '../';
 import { testCases } from './__fixtures__/testCases';
 
 describe('insertAt', () => {

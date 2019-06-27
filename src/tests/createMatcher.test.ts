@@ -1,4 +1,4 @@
-import { createMatcher } from '../src/createMatcher';
+import { createMatcher } from '../createMatcher';
 
 describe('Create Matcher', () => {
   test('tag', () => {
