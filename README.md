@@ -126,7 +126,7 @@ See [PostHTML Guidelines](https://github.com/posthtml/posthtml/tree/master/docs)
 
 [MIT](LICENSE)
 
-[npm]: https://img.shields.io/npm/v/posthtml-insert-at.svg?color=brightgreen
+[npm]: https://img.shields.io/npm/v/posthtml-insert-at.svg?color=blue
 [npm-url]: https://npmjs.com/package/posthtml-insert-at
 [deps]: https://david-dm.org/metonym/posthtml-insert-at.svg
 [deps-url]: https://david-dm.org/metonym/posthtml-insert-at
