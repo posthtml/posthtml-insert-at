@@ -8,9 +8,7 @@
     "outDir": "./lib",
     "removeComments": true,
     "strict": true,
-    "target": "es6",
-    "typeRoots": ["./node_modules/@types", "./types"],
-    "types": ["posthtml", "posthtml-parser", "jest"]
+    "target": "es6"
   },
   "include": ["./src"]
 }
