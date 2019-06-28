@@ -1,4 +1,4 @@
-import { IInsertAtData } from '../..';
+import { IInsertAtData } from '../../posthtmlInsertAs';
 
 interface ITestCase {
   name: string;

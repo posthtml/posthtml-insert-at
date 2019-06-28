@@ -42,7 +42,7 @@ npm i posthtml-insert-at
 ```js
 const fs = require('fs');
 const posthtml = require('posthtml');
-const insertAt = require('posthtml-insert-at').default;
+const { insertAt } = require('posthtml-insert-at');
 
 const html = fs.readFileSync('./index.html');
 
