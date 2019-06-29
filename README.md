@@ -87,13 +87,21 @@ posthtml()
 
 ### Options
 
+| Name       | Kind                                                         | Description                                                         |
+| ---------- | ------------------------------------------------------------ | ------------------------------------------------------------------- |
+| `selector` | **required** `string`                                        | Selector to insert markup at (e.g. `.classname`, `#id` or `tag`)    |
+| `prepend`  | optional `string`                                            | Markup to prepend to the selector                                   |
+| `append`   | optional `string`                                            | Markup to append to the selector                                    |
+| `behavior` | optional (`"inside"` or `"outside"`) - default is `"inside"` | Whether to append/prepend content inside or outside of the selector |
+
 The plugin accepts an object or an an array of objects.
 
 ```js
 const option = {
   selector: 'body',
   prepend: '<header></header>',
-  append: '<footer></footer>'
+  append: '<footer></footer>',
+  behavior: 'inside'
 };
 
 insertAt(option);
@@ -101,17 +109,6 @@ insertAt(option);
 // OR
 
 insertAt([option, ... /* more options */]);
-```
-
-Options:
-
-```ts
-{
-  selector: string; // e.g. 'main' | '.main' | '#main'
-  prepend?: string;
-  append?: string;
-  behavior?: 'inside' | 'outside'; // default is 'inside'
-}
 ```
 
 ### Limitations
