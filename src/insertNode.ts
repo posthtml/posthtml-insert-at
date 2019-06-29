@@ -1,5 +1,6 @@
+import { INode } from 'posthtml';
 import parser from 'posthtml-parser';
-import { IInsertAtData, INode } from './posthtmlInsertAs';
+import { IInsertAtData } from './insertAs';
 
 function insertNode({
   node,

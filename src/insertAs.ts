@@ -1,7 +1,8 @@
+import { INode, ITree } from 'posthtml';
 import { createMatcher } from './createMatcher';
 import { insertNode } from './insertNode';
 
-function posthtmlInsertAt(options: Options) {
+function insertAt(options: Options) {
   return function plugin(tree: ITree) {
     const opts = Array.isArray(options) ? options : [options];
 
@@ -29,22 +30,9 @@ function posthtmlInsertAt(options: Options) {
   };
 }
 
-export { posthtmlInsertAt };
+export { insertAt };
 
 type Options = IInsertAtData | IInsertAtData[];
-
-export interface INode {
-  tag?: string;
-  attrs?: {
-    id?: string;
-    class?: string;
-  };
-  content?: INode[];
-}
-
-interface ITree {
-  match: (matcher: INode | INode[], node: (node: INode) => INode) => void;
-}
 
 export interface IInsertAtData {
   selector: string;

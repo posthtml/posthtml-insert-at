@@ -1,4 +1,4 @@
-import { posthtmlInsertAt } from './posthtmlInsertAs';
+import { insertAt } from './insertAs';
 
-export default posthtmlInsertAt;
-export { posthtmlInsertAt, posthtmlInsertAt as insertAt };
+export default insertAt;
+export { insertAt, insertAt as posthtmlInsertAs };
