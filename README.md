@@ -29,6 +29,8 @@ After:
 </html>
 ```
 
+### [Examples](examples/) [Changelog](CHANGELOG.md)
+
 ## Install
 
 ```bash
