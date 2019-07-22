@@ -1,4 +1,4 @@
-import { IInsertAtData } from '../../insertAs';
+import { IInsertAtData } from '../../insertAt';
 
 interface ITestCase {
   name: string;
