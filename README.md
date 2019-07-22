@@ -5,7 +5,7 @@
 [![Build][build]][build-badge]
 [![Coverage][codecov-shield]][codecov]
 
-`posthtml-insert-at` is a [PostHTML](https://github.com/posthtml/posthtml) plugin to append or prepend HTML inside or outside of a selector.
+`posthtml-insert-at` is a [PostHTML](https://github.com/posthtml/posthtml) plugin to append or prepend HTML to a selector.
 
 ## [Examples](examples/) · [Changelog](CHANGELOG.md)
 
