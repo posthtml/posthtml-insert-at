@@ -7,9 +7,9 @@
 
 `posthtml-insert-at` is a [PostHTML](https://github.com/posthtml/posthtml) plugin to append or prepend HTML to a selector.
 
-## [Examples](examples/) · [Changelog](CHANGELOG.md)
+## [Examples](examples/)
 
-Before:
+**Before:**
 
 ```html
 <html>
@@ -19,7 +19,7 @@ Before:
 </html>
 ```
 
-After:
+**After:**
 
 ```html
 <html>
@@ -87,7 +87,7 @@ posthtml()
   .then(result => fs.writeFileSync('./after.html', result.html));
 ```
 
-### Options
+## Options
 
 | Name       | Kind                                                         | Description                                                         |
 | ---------- | ------------------------------------------------------------ | ------------------------------------------------------------------- |
@@ -107,21 +107,21 @@ const option = {
 };
 
 insertAt(option);
-
 // OR
-
-insertAt([option, ... /* more options */]);
+insertAt([option, /* ...more options */ ]);
 ```
 
-### Limitations
+## Limitations
 
 Currently, this plugin does not supported nested selectors.
 
-### Contributing
+## Contributing
 
-See [PostHTML Guidelines](https://github.com/posthtml/posthtml/tree/master/docs) and [contribution guide](CONTRIBUTING.md).
+See the [PostHTML Guidelines](https://github.com/posthtml/posthtml/tree/master/docs).
 
-### License
+## [Changelog](CHANGELOG.md)
+
+## License
 
 [MIT](LICENSE)
 
