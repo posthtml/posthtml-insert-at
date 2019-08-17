@@ -63,7 +63,10 @@
   "keywords": [
     "html",
     "posthtml",
-    "posthtml-plugin"
+    "posthtml-plugin",
+    "insert",
+    "prepend",
+    "append"
   ],
   "files": [
     "lib/"
