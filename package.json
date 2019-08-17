@@ -9,9 +9,9 @@
   "scripts": {
     "develop": "tsc -w",
     "build": "rm -rf lib && tsc -p tsconfig.prod.json",
+    "lint": "tslint --fix -p . -c tslint.json",
     "test": "jest --coverage",
     "test:tdd": "jest --watch",
-    "lint": "tslint --fix -p . -c tslint.json",
     "prepublishOnly": "yarn build"
   },
   "dependencies": {
