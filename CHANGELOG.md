@@ -9,7 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 *   Add more intuitive default options
 
-## [0.2.3](https://github.com/metonym/posthtml-insert-at/releases/tag/0.2.3) - 2019-08-18
+## [0.2.3](https://github.com/metonym/posthtml-insert-at/releases/tag/0.2.3) - 2019-08-17
 
 *   Update documentation
 
