@@ -12,18 +12,22 @@ function insertNode({
   content: [undefined | PostHTML.RawNode[] | any];
 }): PostHTML.Node {
   if (content[0]) {
-    if (option.append) {
-      content = [...content, parser(option.append)] as any;
+    if (option.append && node.content) {
+      node.content.push(parser(option.append));
+      // content = [...content, parser(option.append)] as PostHTML.Node[];
     }
 
-    if (option.prepend) {
-      content = [parser(option.prepend), ...content] as any;
+    if (option.prepend && node.content) {
+      node.content.unshift(parser(option.prepend));
+      // content = [parser(option.prepend), ...content] as PostHTML.Node[];
     }
 
+    return node;
+    /* 
     return {
       ...node,
       content
-    };
+    }; */
   }
 
   return node;
