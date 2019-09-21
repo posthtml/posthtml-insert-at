@@ -108,7 +108,7 @@ const option = {
 
 insertAt(option);
 // OR
-insertAt([option, /* ...more options */ ]);
+insertAt([option /*, ...more options */]);
 ```
 
 ## Limitations
