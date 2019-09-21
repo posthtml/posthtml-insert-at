@@ -1,11 +1,6 @@
 import { PostHTML } from 'posthtml';
 
-interface IMatcher {
-  tag?: PostHTML.StringMatcher;
-  attrs?: PostHTML.AttrMatcher;
-}
-
-function createMatcher(selector: string): IMatcher {
+function createMatcher(selector: string): ICreateMatcherResult {
   switch (selector.charAt(0)) {
     case '#':
       return { attrs: { id: selector.slice(1) } };
@@ -14,6 +9,11 @@ function createMatcher(selector: string): IMatcher {
     default:
       return { tag: selector };
   }
+}
+
+interface ICreateMatcherResult {
+  tag?: PostHTML.StringMatcher;
+  attrs?: PostHTML.AttrMatcher;
 }
 
 export { createMatcher };

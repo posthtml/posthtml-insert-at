@@ -11,9 +11,9 @@ function insertAt(options: Options) {
       const behavior = option.behavior || 'inside';
 
       if (behavior === 'inside') {
-        tree.match(matcher, node => {
-          return insertNode({ node, option, content: [node.content] });
-        });
+        tree.match(matcher, node =>
+          insertNode({ node, option, content: [node.content] })
+        );
       } else {
         let siblingNode = {};
 
