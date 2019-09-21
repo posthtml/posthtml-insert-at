@@ -8,21 +8,11 @@ interface IMatcher {
 function createMatcher(selector: string): IMatcher {
   switch (selector.charAt(0)) {
     case '#':
-      return {
-        attrs: {
-          id: selector.slice(1)
-        }
-      };
+      return { attrs: { id: selector.slice(1) } };
     case '.':
-      return {
-        attrs: {
-          class: selector.slice(1)
-        }
-      };
+      return { attrs: { class: selector.slice(1) } };
     default:
-      return {
-        tag: selector
-      };
+      return { tag: selector };
   }
 }
 

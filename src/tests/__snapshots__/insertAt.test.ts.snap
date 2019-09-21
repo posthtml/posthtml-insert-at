@@ -13,7 +13,9 @@ exports[`insertAt 'Append/prepend inside' matches the snapshot 1`] = `
 exports[`insertAt 'Append/prepend outside' matches the snapshot 1`] = `
 "
       <html>
-        <body><header></header><main>text</main><footer></footer></body>
+        <body><header></header>
+          <main>text</main>
+        <footer></footer></body>
       </html>
     "
 `;
