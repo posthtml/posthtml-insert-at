@@ -1,4 +1,11 @@
-function createMatcher(selector: string) {
+import { PostHTML } from 'posthtml';
+
+interface IMatcher {
+  tag?: PostHTML.StringMatcher;
+  attrs?: PostHTML.AttrMatcher;
+}
+
+function createMatcher(selector: string): IMatcher {
   switch (selector.charAt(0)) {
     case '#':
       return {

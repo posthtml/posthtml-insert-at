@@ -33,7 +33,7 @@ exports[`insertAt 'Options is an array' matches the snapshot 1`] = `
       <html>
         <body>
           <main>text<footer></footer></main>
-          <div id=\\"content\\"><footer></footer></div>
+          <div id=\\"content\\"></div>
         </body>
       </html>
     "
