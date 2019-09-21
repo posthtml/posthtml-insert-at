@@ -1,6 +1,6 @@
 {
   "name": "posthtml-insert-at",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "license": "MIT",
   "description": "PostHTML plugin to append or prepend HTML to a selector",
   "author": "Eric Liu (https://github.com/metonym)",
