@@ -1,4 +1,4 @@
-import { INode } from 'posthtml';
+import { PostHTML } from 'posthtml';
 import parser from 'posthtml-parser';
 import { IInsertAtData } from './insertAt';
 
@@ -7,22 +7,26 @@ function insertNode({
   option,
   content
 }: {
-  node: INode;
+  node: PostHTML.Node;
   option: IInsertAtData;
-  content: INode[];
-}) {
-  if (option.append) {
-    content = [...content, parser(option.append)];
+  content: [undefined | PostHTML.RawNode[] | any];
+}): PostHTML.Node {
+  if (content[0]) {
+    if (option.append) {
+      content = [...content, parser(option.append)] as any;
+    }
+
+    if (option.prepend) {
+      content = [parser(option.prepend), ...content] as any;
+    }
+
+    return {
+      ...node,
+      content
+    };
   }
 
-  if (option.prepend) {
-    content = [parser(option.prepend), ...content];
-  }
-
-  return {
-    ...node,
-    content
-  };
+  return node;
 }
 
 export { insertNode };

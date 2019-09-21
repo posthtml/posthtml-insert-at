@@ -8,7 +8,7 @@ describe('insertAt', () => {
       posthtml()
         .use(insertAt(testCase.options))
         .process(testCase.input)
-        .then((result: { html: string }) => {
+        .then(result => {
           expect(result.html).toMatchSnapshot();
         });
     });

@@ -1,9 +1,9 @@
-import { INode, ITree } from 'posthtml';
+import { PostHTML } from 'posthtml';
 import { createMatcher } from './createMatcher';
 import { insertNode } from './insertNode';
 
 function insertAt(options: Options) {
-  return function plugin(tree: ITree) {
+  return function plugin(tree: PostHTML.Node) {
     const opts = Array.isArray(options) ? options : [options];
 
     opts.forEach(option => {
@@ -11,9 +11,9 @@ function insertAt(options: Options) {
       const behavior = option.behavior || 'inside';
 
       if (behavior === 'inside') {
-        tree.match(matcher, node =>
-          insertNode({ node, option, content: [node.content as INode] })
-        );
+        tree.match(matcher, node => {
+          return insertNode({ node, option, content: [node.content] });
+        });
       } else {
         let siblingNode = {};
 
@@ -22,8 +22,10 @@ function insertAt(options: Options) {
           return node;
         });
 
+        const matchingNode = siblingNode as PostHTML.RawNode;
+
         tree.match({ content: [matcher] }, node =>
-          insertNode({ node, option, content: [siblingNode] })
+          insertNode({ node, option, content: [matchingNode] })
         );
       }
     });
