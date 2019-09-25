@@ -129,7 +129,7 @@ See the [PostHTML Guidelines](https://github.com/posthtml/posthtml/tree/master/d
 [npm-url]: https://npmjs.com/package/posthtml-insert-at
 [deps]: https://david-dm.org/metonym/posthtml-insert-at.svg
 [deps-url]: https://david-dm.org/metonym/posthtml-insert-at
-[build]: https://travis-ci.com/metonym/posthtml-insert-at.svg?branch=master
-[build-badge]: https://travis-ci.com/metonym/posthtml-insert-at
-[codecov]: https://codecov.io/gh/metonym/posthtml-insert-at
-[codecov-shield]: https://img.shields.io/codecov/c/github/metonym/posthtml-insert-at.svg
+[build]: https://travis-ci.org/posthtml/posthtml-insert-at.svg?branch=master
+[build-badge]: https://travis-ci.com/posthtml/posthtml-insert-at
+[codecov]: https://codecov.io/gh/posthtml/posthtml-insert-at
+[codecov-shield]: https://img.shields.io/codecov/c/github/posthtml/posthtml-insert-at.svg
