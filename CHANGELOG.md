@@ -9,6 +9,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Add more intuitive default options
 
+## [0.2.5](https://github.com/posthtml/posthtml-insert-at/releases/tag/0.2.5) - 2019-10-12
+
+- Fix regression where content is not prepended to an empty tag
+  ([#3](https://github.com/posthtml/posthtml-insert-at/issues/3))
+
 ## [0.2.4](https://github.com/posthtml/posthtml-insert-at/releases/tag/0.2.4) - 2019-09-21
 
 - Upgrade posthtml version from 0.14 to 0.16
