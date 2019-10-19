@@ -127,8 +127,8 @@ See the [PostHTML Guidelines](https://github.com/posthtml/posthtml/tree/master/d
 
 [npm]: https://img.shields.io/npm/v/posthtml-insert-at.svg?color=blue
 [npm-url]: https://npmjs.com/package/posthtml-insert-at
-[deps]: https://david-dm.org/metonym/posthtml-insert-at.svg
-[deps-url]: https://david-dm.org/metonym/posthtml-insert-at
+[deps]: https://david-dm.org/posthtml/posthtml-insert-at.svg
+[deps-url]: https://david-dm.org/posthtml/posthtml-insert-at
 [build]: https://travis-ci.org/posthtml/posthtml-insert-at.svg?branch=master
 [build-badge]: https://travis-ci.com/posthtml/posthtml-insert-at
 [codecov]: https://codecov.io/gh/posthtml/posthtml-insert-at
