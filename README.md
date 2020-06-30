@@ -41,20 +41,20 @@ npm i posthtml-insert-at
 ## Usage
 
 ```js
-const fs = require('fs');
-const posthtml = require('posthtml');
-const { insertAt } = require('posthtml-insert-at');
+const fs = require("fs");
+const posthtml = require("posthtml");
+const { insertAt } = require("posthtml-insert-at");
 
-const html = fs.readFileSync('./index.html');
+const html = fs.readFileSync("./index.html");
 
 posthtml()
   .use(
     insertAt({
       /**
        * Specify the selector to append/prepend content to.
-       * Selectors include tag name (e.g. `main`), class (e.g. `.main`) or id (e.g. `#main`).
+       * Example selectors: `main`, `#id`, `.class`, `main.foo`.
        */
-      selector: 'main',
+      selector: "main",
 
       /**
        * Prepend HTML markup at the selector.
@@ -79,11 +79,11 @@ posthtml()
        *
        * The default behavior is `inside`.
        */
-      behavior: 'outside'
+      behavior: "outside",
     })
   )
   .process(html)
-  .then(result => fs.writeFileSync('./after.html', result.html));
+  .then((result) => fs.writeFileSync("./after.html", result.html));
 ```
 
 ## Options
@@ -99,10 +99,10 @@ The plugin accepts an object or an an array of objects.
 
 ```js
 const option = {
-  selector: 'body',
-  prepend: '<header></header>',
-  append: '<footer></footer>',
-  behavior: 'inside'
+  selector: "body",
+  prepend: "<header></header>",
+  append: "<footer></footer>",
+  behavior: "inside",
 };
 
 insertAt(option);
