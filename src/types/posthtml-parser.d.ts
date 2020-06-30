@@ -1,1 +1,1 @@
-declare module 'posthtml-parser';
+declare module "posthtml-parser";

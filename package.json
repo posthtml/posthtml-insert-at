@@ -4,15 +4,12 @@
   "license": "MIT",
   "description": "PostHTML plugin to append or prepend HTML to a selector",
   "author": "Eric Liu (https://github.com/metonym)",
-  "main": "lib/index.js",
-  "types": "lib/index.d.ts",
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
   "scripts": {
-    "develop": "tsc -w",
-    "build": "tsc -p tsconfig.prod.json",
-    "lint": "tslint --fix -p . -c tslint.json",
     "test": "jest --coverage",
     "test:tdd": "jest --watch",
-    "prepublishOnly": "yarn build"
+    "prepack": "tsc"
   },
   "dependencies": {
     "posthtml": "^0.13.1",
@@ -20,9 +17,9 @@
     "posthtml-parser": "^0.4.1"
   },
   "devDependencies": {
-    "@types/jest": "^25.1.1",
-    "jest": "^25.1.0",
-    "ts-jest": "^25.2.1",
+    "@types/jest": "^26.0.3",
+    "jest": "^26.1.0",
+    "ts-jest": "^26.1.1",
     "typescript": "^3.9.5"
   },
   "jest": {

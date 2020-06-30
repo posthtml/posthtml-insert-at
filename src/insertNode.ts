@@ -1,6 +1,6 @@
-import PostHTML from 'posthtml';
-import parser from 'posthtml-parser';
-import { IInsertAtData } from './insertAt';
+import PostHTML from "posthtml";
+import parser from "posthtml-parser";
+import { IInsertAtData } from "./insertAt";
 
 function insertNode({ node, option }: IInsertNodeParams) {
   const content = node.content || [];

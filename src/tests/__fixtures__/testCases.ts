@@ -1,4 +1,4 @@
-import { IInsertAtData } from '../../insertAt';
+import { IInsertAtData } from "../../insertAt";
 
 interface ITestCase {
   name: string;
@@ -8,7 +8,7 @@ interface ITestCase {
 
 const testCases: ITestCase[] = [
   {
-    name: 'Append/prepend inside',
+    name: "Append/prepend inside",
     input: `
       <html>
         <body>
@@ -17,14 +17,14 @@ const testCases: ITestCase[] = [
       </html>
     `,
     options: {
-      selector: 'main',
-      prepend: '<header></header>',
-      append: '<footer></footer>',
-      behavior: 'inside'
-    }
+      selector: "main",
+      prepend: "<header></header>",
+      append: "<footer></footer>",
+      behavior: "inside",
+    },
   },
   {
-    name: 'Append/prepend outside',
+    name: "Append/prepend outside",
     input: `
       <html>
         <body>
@@ -33,14 +33,14 @@ const testCases: ITestCase[] = [
       </html>
     `,
     options: {
-      selector: 'main',
-      prepend: '<header></header>',
-      append: '<footer></footer>',
-      behavior: 'outside'
-    }
+      selector: "main",
+      prepend: "<header></header>",
+      append: "<footer></footer>",
+      behavior: "outside",
+    },
   },
   {
-    name: 'Behavior not specified',
+    name: "Behavior not specified",
     input: `
       <html>
         <body>
@@ -49,12 +49,12 @@ const testCases: ITestCase[] = [
       </html>
     `,
     options: {
-      selector: 'main',
-      append: '<footer></footer>'
-    }
+      selector: "main",
+      append: "<footer></footer>",
+    },
   },
   {
-    name: 'Multiple class selector',
+    name: "Multiple class selector",
     input: `
       <html>
         <body>
@@ -63,12 +63,12 @@ const testCases: ITestCase[] = [
       </html>
     `,
     options: {
-      selector: '.foo',
-      append: '<div>content</div>'
-    }
+      selector: ".foo",
+      append: "<div>content</div>",
+    },
   },
   {
-    name: 'Element/class selector',
+    name: "Element/class selector",
     input: `
       <html>
         <body>
@@ -77,12 +77,12 @@ const testCases: ITestCase[] = [
       </html>
     `,
     options: {
-      selector: 'main.bar',
-      append: '<div>content</div>'
-    }
+      selector: "main.bar",
+      append: "<div>content</div>",
+    },
   },
   {
-    name: 'Options is an array',
+    name: "Options is an array",
     input: `
       <html>
         <body>
@@ -93,16 +93,16 @@ const testCases: ITestCase[] = [
     `,
     options: [
       {
-        selector: 'main',
-        append: '<footer></footer>'
+        selector: "main",
+        append: "<footer></footer>",
       },
       {
-        selector: '#content',
-        prepend: '<footer></footer>',
-        behavior: 'inside'
-      }
-    ]
-  }
+        selector: "#content",
+        prepend: "<footer></footer>",
+        behavior: "inside",
+      },
+    ],
+  },
 ];
 
 export { testCases };

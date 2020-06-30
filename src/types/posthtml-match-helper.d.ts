@@ -1,1 +1,1 @@
-declare module 'posthtml-match-helper';
+declare module "posthtml-match-helper";
