@@ -54,6 +54,34 @@ const testCases: ITestCase[] = [
     }
   },
   {
+    name: 'Multiple class selector',
+    input: `
+      <html>
+        <body>
+          <main class="foo bar">text</main>
+        </body>
+      </html>
+    `,
+    options: {
+      selector: '.foo',
+      append: '<div>content</div>'
+    }
+  },
+  {
+    name: 'Element/class selector',
+    input: `
+      <html>
+        <body>
+          <main class="foo bar">text</main>
+        </body>
+      </html>
+    `,
+    options: {
+      selector: 'main.bar',
+      append: '<div>content</div>'
+    }
+  },
+  {
     name: 'Options is an array',
     input: `
       <html>
