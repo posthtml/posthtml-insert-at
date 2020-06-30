@@ -57,13 +57,19 @@ object-assign@^4.1.1:
   resolved "https://registry.yarnpkg.com/object-assign/-/object-assign-4.1.1.tgz#2109adc7965887cfc05cbbd442cac8bfbb360863"
   integrity sha1-IQmtx5ZYh8/AXLvUQsrIv7s2CGM=
 
-posthtml-insert-at@^0.2.2:
-  version "0.2.2"
-  resolved "https://registry.yarnpkg.com/posthtml-insert-at/-/posthtml-insert-at-0.2.2.tgz#a60db0c94a4e7e48a6d866382ed802ed63ce8a30"
-  integrity sha512-ta85CjdtBR4pmB2ekM2OLhtS/9KtwhGbr2vFg5zysNiUuJE1BMRZoW9gaO507ikk6CmN7HAAbapyVs8Xd9hn8A==
+posthtml-insert-at@^0.2.7:
+  version "0.2.7"
+  resolved "https://registry.npmjs.org/posthtml-insert-at/-/posthtml-insert-at-0.2.7.tgz#08962723a96540833438b6b321fb3956f35f5632"
+  integrity sha512-IfxhEQdLvqP5obkBfCtAe2Gqs9rsDGR9yIpoDjpKYVKt7J5UVpxemEi8Zv5fXudbIRXC4f/gd009VCE8ixNeXQ==
   dependencies:
-    posthtml "^0.11.4"
+    posthtml "^0.12.0"
+    posthtml-match-helper "^1.0.1"
     posthtml-parser "^0.4.1"
+
+posthtml-match-helper@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.npmjs.org/posthtml-match-helper/-/posthtml-match-helper-1.0.1.tgz#451253de8e5844a348e963ad5edd7769eb129513"
+  integrity sha1-RRJT3o5YRKNI6WOtXt13aesSlRM=
 
 posthtml-parser@^0.4.1:
   version "0.4.1"
@@ -73,18 +79,33 @@ posthtml-parser@^0.4.1:
     htmlparser2 "^3.9.2"
     object-assign "^4.1.1"
 
-posthtml-render@^1.1.5:
-  version "1.1.5"
-  resolved "https://registry.yarnpkg.com/posthtml-render/-/posthtml-render-1.1.5.tgz#387934e85438a3de77085fbc7d264efb00bd0e0f"
-  integrity sha512-yvt54j0zCBHQVEFAuR+yHld8CZrCa/E1Z/OcFNCV1IEWTLVxT8O7nYnM4IIw1CD4r8kaRd3lc42+0lgCKgm87w==
-
-posthtml@^0.11.4:
-  version "0.11.4"
-  resolved "https://registry.yarnpkg.com/posthtml/-/posthtml-0.11.4.tgz#26784d005d57d7aea93ab06dda899d59bdf186c7"
-  integrity sha512-ezlzBkoPoRgh0jkmT1dsM8eT+lr2azyZ546kbda8oHnVnzvyaB3Ywo6UxUz8wPSOkFAAflCxZJhvvpQH1F6qcA==
+posthtml-parser@^0.4.2:
+  version "0.4.2"
+  resolved "https://registry.npmjs.org/posthtml-parser/-/posthtml-parser-0.4.2.tgz#a132bbdf0cd4bc199d34f322f5c1599385d7c6c1"
+  integrity sha512-BUIorsYJTvS9UhXxPTzupIztOMVNPa/HtAm9KHni9z6qEfiJ1bpOBL5DfUOL9XAc3XkLIEzBzpph+Zbm4AdRAg==
   dependencies:
-    posthtml-parser "^0.4.1"
-    posthtml-render "^1.1.5"
+    htmlparser2 "^3.9.2"
+
+posthtml-render@^1.2.2:
+  version "1.2.2"
+  resolved "https://registry.npmjs.org/posthtml-render/-/posthtml-render-1.2.2.tgz#f554a19ed40d40e2bfc160826b0a91d4a23656cd"
+  integrity sha512-MbIXTWwAfJ9qET6Zl29UNwJcDJEEz9Zkr5oDhiujitJa7YBJwEpbkX2cmuklCDxubTMoRWpid3q8DrSyGnUUzQ==
+
+posthtml@^0.12.0:
+  version "0.12.3"
+  resolved "https://registry.npmjs.org/posthtml/-/posthtml-0.12.3.tgz#8fa5b903907e9c10ba5b883863cc550189a309d5"
+  integrity sha512-Fbpi95+JJyR0tqU7pUy1zTSQFjAsluuwB9pJ1h0jtnGk7n/O2TBtP5nDl9rV0JVACjQ1Lm5wSp4ppChr8u3MhA==
+  dependencies:
+    posthtml-parser "^0.4.2"
+    posthtml-render "^1.2.2"
+
+posthtml@^0.13.1:
+  version "0.13.1"
+  resolved "https://registry.npmjs.org/posthtml/-/posthtml-0.13.1.tgz#3b85df6b0e084370a713302043c1c0f47cbaa5a8"
+  integrity sha512-8aJZ63WYL9YsAZVcrIn6U0dSYbna7hcTceZjnbH7dilg01t4t3JDx0UovbhGFscFJg/++qhECCjGEQuJAqD7dA==
+  dependencies:
+    posthtml-parser "^0.4.2"
+    posthtml-render "^1.2.2"
 
 readable-stream@^3.1.1:
   version "3.4.0"

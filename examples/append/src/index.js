@@ -7,9 +7,9 @@ const html = fs.readFileSync('./index.html');
 posthtml()
   .use(
     insertAt({
-      selector: 'main',
+      selector: '.foo',
       append: `
-        <footer>
+        <footer id="footer">
           &copy; ${new Date().getFullYear()}
         </footer>
       `,
