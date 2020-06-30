@@ -30,6 +30,26 @@ exports[`insertAt 'Behavior not specified' matches the snapshot 1`] = `
     "
 `;
 
+exports[`insertAt 'Element/class selector' matches the snapshot 1`] = `
+"
+      <html>
+        <body>
+          <main class=\\"foo bar\\">text<div>content</div></main>
+        </body>
+      </html>
+    "
+`;
+
+exports[`insertAt 'Multiple class selector' matches the snapshot 1`] = `
+"
+      <html>
+        <body>
+          <main class=\\"foo bar\\">text<div>content</div></main>
+        </body>
+      </html>
+    "
+`;
+
 exports[`insertAt 'Options is an array' matches the snapshot 1`] = `
 "
       <html>
