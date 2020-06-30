@@ -1,5 +1,5 @@
 import { PostHTML } from 'posthtml';
-import { createMatcher } from './createMatcher';
+import createMatcher from 'posthtml-match-helper';
 import { insertNode } from './insertNode';
 
 function insertAt(options: Options) {
@@ -7,7 +7,7 @@ function insertAt(options: Options) {
     const opts = Array.isArray(options) ? options : [options];
 
     opts.forEach(option => {
-      const matcher = createMatcher(option.selector.trim());
+      const matcher = createMatcher(option.selector);
       const behavior = option.behavior || 'inside';
 
       if (behavior === 'inside') {
