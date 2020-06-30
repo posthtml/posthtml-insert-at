@@ -9,6 +9,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Add more intuitive default options
 
+## [0.2.7](https://github.com/posthtml/posthtml-insert-at/releases/tag/0.2.7) - 2020-06-30
+
+- Use [posthtml-match-helper](https://github.com/posthtml/posthtml-match-helper) for better selector matching ([PR #38](https://github.com/posthtml/posthtml-insert-at/pull/38))
+
 ## [0.2.6](https://github.com/posthtml/posthtml-insert-at/releases/tag/0.2.6) - 2019-10-16
 
 - Upgrade posthtml from 0.11.6 to 0.12.0
