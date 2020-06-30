@@ -1,4 +1,4 @@
-import { PostHTML } from 'posthtml';
+import PostHTML from 'posthtml';
 import parser from 'posthtml-parser';
 import { IInsertAtData } from './insertAt';
 

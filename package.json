@@ -15,7 +15,7 @@
     "prepublishOnly": "yarn build"
   },
   "dependencies": {
-    "posthtml": "^0.12.0",
+    "posthtml": "^0.13.1",
     "posthtml-match-helper": "^1.0.1",
     "posthtml-parser": "^0.4.1"
   },
@@ -30,7 +30,7 @@
     "ts-jest": "^25.2.1",
     "tslint": "^6.0.0",
     "tslint-config-prettier": "^1.18.0",
-    "typescript": "^3.6.3"
+    "typescript": "^3.9.5"
   },
   "husky": {
     "hooks": {

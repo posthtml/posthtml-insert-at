@@ -1,4 +1,4 @@
-import { PostHTML } from 'posthtml';
+import PostHTML from 'posthtml';
 import createMatcher from 'posthtml-match-helper';
 import { insertNode } from './insertNode';
 
