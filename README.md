@@ -1,8 +1,6 @@
 # posthtml-insert-at <img align="right" width="220" height="200" title="PostHTML logo" src="http://posthtml.github.io/posthtml/logo.svg">
 
 [![NPM][npm]][npm-url]
-[![Build][build]][build-badge]
-[![Coverage][codecov-shield]][codecov]
 
 `posthtml-insert-at` is a [PostHTML](https://github.com/posthtml/posthtml) plugin to append or prepend HTML to a selector.
 
@@ -126,7 +124,3 @@ See the [PostHTML Guidelines](https://github.com/posthtml/posthtml/tree/master/d
 
 [npm]: https://img.shields.io/npm/v/posthtml-insert-at.svg?color=blue
 [npm-url]: https://npmjs.com/package/posthtml-insert-at
-[build]: https://travis-ci.org/posthtml/posthtml-insert-at.svg?branch=master
-[build-badge]: https://travis-ci.com/posthtml/posthtml-insert-at
-[codecov]: https://codecov.io/gh/posthtml/posthtml-insert-at
-[codecov-shield]: https://img.shields.io/codecov/c/github/posthtml/posthtml-insert-at.svg

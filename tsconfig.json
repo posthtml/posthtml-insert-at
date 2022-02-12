@@ -2,12 +2,11 @@
   "compilerOptions": {
     "declaration": true,
     "esModuleInterop": true,
-    "lib": ["esnext"],
+    "lib": ["ESNext"],
     "module": "commonjs",
     "moduleResolution": "node",
     "outDir": "lib",
     "strict": true
   },
-  "include": ["src"],
-  "exclude": ["src/tests"]
+  "include": ["src/**/*"]
 }
