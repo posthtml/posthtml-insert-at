@@ -7,29 +7,24 @@
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
   "scripts": {
-    "test": "jest --coverage",
-    "test:tdd": "jest --watch",
+    "test": "vitest",
     "prepack": "tsc"
   },
   "dependencies": {
-    "posthtml": "^0.13.1",
+    "posthtml": "^0.16.5",
     "posthtml-match-helper": "^1.0.1",
-    "posthtml-parser": "^0.4.1"
+    "posthtml-parser": "^0.10.2"
   },
   "devDependencies": {
-    "@types/jest": "^26.0.3",
-    "jest": "^26.1.0",
-    "ts-jest": "^26.1.1",
-    "typescript": "^3.9.5"
-  },
-  "jest": {
-    "preset": "ts-jest"
+    "typescript": "^4.5.5",
+    "vitest": "^0.3.2"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/posthtml/posthtml-insert-at.git"
   },
   "homepage": "https://github.com/posthtml/posthtml-insert-at",
+  "bugs": "https://github.com/posthtml/posthtml-insert-at/issues",
   "keywords": [
     "html",
     "posthtml",
@@ -40,6 +35,5 @@
   ],
   "files": [
     "lib"
-  ],
-  "bugs": "https://github.com/posthtml/posthtml-insert-at/issues"
+  ]
 }

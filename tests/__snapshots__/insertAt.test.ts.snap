@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1
 
-exports[`insertAt 'Append/prepend inside' matches the snapshot 1`] = `
+exports[`insertAt > 'Append/prepend inside' matches the snapshot 1`] = `
 "
       <html>
         <body>
@@ -10,7 +10,7 @@ exports[`insertAt 'Append/prepend inside' matches the snapshot 1`] = `
     "
 `;
 
-exports[`insertAt 'Append/prepend outside' matches the snapshot 1`] = `
+exports[`insertAt > 'Append/prepend outside' matches the snapshot 1`] = `
 "
       <html>
         <body><header></header>
@@ -20,7 +20,7 @@ exports[`insertAt 'Append/prepend outside' matches the snapshot 1`] = `
     "
 `;
 
-exports[`insertAt 'Behavior not specified' matches the snapshot 1`] = `
+exports[`insertAt > 'Behavior not specified' matches the snapshot 1`] = `
 "
       <html>
         <body>
@@ -30,7 +30,7 @@ exports[`insertAt 'Behavior not specified' matches the snapshot 1`] = `
     "
 `;
 
-exports[`insertAt 'Element/class selector' matches the snapshot 1`] = `
+exports[`insertAt > 'Element/class selector' matches the snapshot 1`] = `
 "
       <html>
         <body>
@@ -40,7 +40,7 @@ exports[`insertAt 'Element/class selector' matches the snapshot 1`] = `
     "
 `;
 
-exports[`insertAt 'Multiple class selector' matches the snapshot 1`] = `
+exports[`insertAt > 'Multiple class selector' matches the snapshot 1`] = `
 "
       <html>
         <body>
@@ -50,7 +50,7 @@ exports[`insertAt 'Multiple class selector' matches the snapshot 1`] = `
     "
 `;
 
-exports[`insertAt 'Options is an array' matches the snapshot 1`] = `
+exports[`insertAt > 'Options is an array' matches the snapshot 1`] = `
 "
       <html>
         <body>

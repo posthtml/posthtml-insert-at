@@ -1,9 +1,8 @@
 {
-  "name": "append",
-  "version": "1.0.0",
   "private": true,
-  "main": "./src/index.js",
-  "license": "MIT",
+  "scripts": {
+    "posthtml": "node src"
+  },
   "dependencies": {
     "posthtml": "^0.13.1",
     "posthtml-insert-at": "^0.2.7"

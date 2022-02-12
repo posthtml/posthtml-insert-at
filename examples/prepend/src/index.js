@@ -2,7 +2,7 @@ const fs = require('fs');
 const posthtml = require('posthtml');
 const { insertAt } = require('posthtml-insert-at');
 
-const html = fs.readFileSync('./index.html');
+const html = fs.readFileSync('./src/index.html');
 
 posthtml()
   .use(
@@ -17,4 +17,4 @@ posthtml()
     })
   )
   .process(html)
-  .then(result => fs.writeFileSync('./after.html', result.html));
+  .then(result => fs.writeFileSync('./src/after.html', result.html));
