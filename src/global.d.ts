@@ -1,4 +1,14 @@
 declare module "posthtml-match-helper" {
-  function createMatcher(matcher: string | string[]): string[];
-  export default createMatcher;
+  interface Matcher {
+    tag?: string;
+    attrs: {
+      id?: string;
+      class?: RegExp;
+      [attr: string]: any;
+    };
+  }
+
+  export default function createMatcher(
+    matcher: string | string[]
+  ): Matcher | Matcher[];
 }
