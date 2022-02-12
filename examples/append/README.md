@@ -8,19 +8,11 @@ This example illustrates the ability to append markup to a selector using the "o
 
 ## Running Locally
 
-Clone the repo and install the dependencies:
-
-```bash
-git clone git@github.com:posthtml/posthtml-insert-at.git
-cd posthtml-insert-at/examples/append
-yarn install
-```
-
 Run the following:
 
 ```bash
-cd src/
-node index.js
+yarn install
+yarn posthtml
 ```
 
 The processed file should be written to src/after.html.
