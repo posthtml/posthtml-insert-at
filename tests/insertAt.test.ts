@@ -1,4 +1,7 @@
-import { IInsertAtData } from "../../insertAt";
+import posthtml from "posthtml";
+import { describe, test, expect } from "vitest";
+import { insertAt } from "../src";
+import type { IInsertAtData } from "../src/insertAt";
 
 interface ITestCase {
   name: string;
@@ -105,4 +108,18 @@ const testCases: ITestCase[] = [
   },
 ];
 
-export { testCases };
+describe("insertAt", () => {
+  testCases.forEach((testCase) => {
+    test(`'${testCase.name}' matches the snapshot`, () => {
+      posthtml()
+        .use(insertAt(testCase.options))
+        .process(testCase.input)
+        .then((result) => {
+          expect(result.html).toMatchSnapshot();
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    });
+  });
+});
