@@ -1,8 +1,17 @@
-import PostHTML from "posthtml";
 import createMatcher from "posthtml-match-helper";
 import { insertNode } from "./insertNode";
+import type PostHTML from "posthtml";
 
-function insertAt(options: Options) {
+type Options = IInsertAtData | IInsertAtData[];
+
+export interface IInsertAtData {
+  selector: string;
+  behavior?: "inside" | "outside";
+  append?: string;
+  prepend?: string;
+}
+
+export function insertAt(options: Options) {
   return function plugin(tree: PostHTML.Node) {
     const opts = Array.isArray(options) ? options : [options];
 
@@ -22,7 +31,7 @@ function insertAt(options: Options) {
           return node;
         });
 
-        const matchingNode = siblingNode as PostHTML.RawNode;
+        const matchingNode = siblingNode as PostHTML.Node["content"];
 
         tree.match({ content: [matcher] }, (node) =>
           insertNode({ node, option, content: [matchingNode] })
@@ -30,15 +39,4 @@ function insertAt(options: Options) {
       }
     });
   };
-}
-
-export { insertAt };
-
-type Options = IInsertAtData | IInsertAtData[];
-
-export interface IInsertAtData {
-  selector: string;
-  behavior?: "inside" | "outside";
-  append?: string;
-  prepend?: string;
 }
