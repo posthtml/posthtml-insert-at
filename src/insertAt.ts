@@ -33,7 +33,7 @@ export function insertAt(options: Options) {
 
         const matchingNode = siblingNode as PostHTML.Node["content"];
 
-        tree.match({ content: [matcher] }, (node) =>
+        tree.match({ content: [matcher as PostHTML.ContentMatcher] }, (node) =>
           insertNode({ node, option, content: [matchingNode] })
         );
       }
