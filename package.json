@@ -11,13 +11,13 @@
     "prepack": "tsc"
   },
   "dependencies": {
-    "posthtml": "^0.16.5",
-    "posthtml-match-helper": "^1.0.1",
-    "posthtml-parser": "^0.10.2"
+    "posthtml": "^0.16.6",
+    "posthtml-match-helper": "^1.0.3",
+    "posthtml-parser": "^0.11.0"
   },
   "devDependencies": {
-    "typescript": "^4.5.5",
-    "vitest": "^0.3.2"
+    "typescript": "^4.7.4",
+    "vitest": "^0.16.0"
   },
   "repository": {
     "type": "git",
